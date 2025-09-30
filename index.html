@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Suburbs - Lockyer Valley</title>
+    <title>PN Lockyer Valley | Our Suburbs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -15,62 +16,84 @@
 
     <!-- Main content -->
     <main>
-        <section class="intro">
-            <div class="intro-text">
+        <section class="row intro">
+            <div class="col-sm-8">
                 <h1>Welcome to the beautiful Lockyer Valley</h1>
                 <p>
-                    The Lockyer Valley is a local government area in the West Moreton region of Southeast Queensland.
+                    The Lockyer Valley is a local government area in the West Moreton region of Southeast
+                    Queensland.
                 </p>
                 <p>Affectionately known as Australia’s Salad Bowl, the Lockyer Vlley blends diverse, thriving
                     agriculture with the convenience of being less than two hours from Brisbane.</p>
-                <p>This perfect balance of town and country living fuels the Lockyer Valley's strong ongoing exciting
+                <p>This perfect balance of town and country living fuels the Lockyer Valley's strong ongoing
+                    exciting
                     growth.
                 </p>
+                <img src="images/lockyer-map.png" alt="Lockyer Valley" class="img-responsive visible-xs" />
+                <p><strong>Showing Strong Sustainable Growth All Suburbs</strong></p>
+                <p>Our Suburbs: Laidley, Gatton, Rosewood, Others
+                </p>
+                <small>Source of extracts: Public articles or access available.</small>
             </div>
-            <img src="images/lockyer-map.png" alt="Lockyer Valley" />
+            <div class="col-sm-4 hidden-xs"><img src="images/lockyer-map.png" alt="Lockyer Valley"
+                    class="img-responsive" />
+            </div>
         </section>
-
-        <section class="region">
-            <h2>Explore the Lockyer Valley</h2>
-            <div class="video-placeholder">[Video Placeholder]</div>
+        <section>
+            <div class="title-group">
+                <h3 class="section-title">
+                    Laidley
+                </h3><small><a href="#">suburbs</a></small>
+            </div>
+            <div>
+                <article class="row">
+                    <div class="col-sm-6 suburb">
+                        <img src="images/laidley.png" alt="Sample" class="img-responsive">
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>Great Vibrant Community</h4>
+                        <p>
+                            The region's fertile soil supports diverse and robust farming activities including
+                            breeding and crop cultivation.
+                        </p>
+                        <p>
+                            Its high-quality brings strong local and international demand and contributing significantly
+                            to Queensland's agricultural output.
+                        </p>
+                        <h4>Laidley thrives on its rich agricultural heritage.</h4>
+                        <ul>
+                            <li>September 2025, the median house price $531,788</li>
+                            <li>A robust annual growth of 17.4%</li>
+                            <li>Median weekly rent of $500</li>
+                            <li>A rental yield of 4.95%</li>
+                            <li>Indicating strong demand and investment potential</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </section>
-
-        <section class="our-suburbs">
-            <h2>Our Suburbs</h2>
-            <p>Showing Strong Sustainable Growth All Suburbs<br />
-                Our Suburbs: Laidley, Gatton, Rosewood, Others</p>
-            <div class="suburbs">
-                <article class="suburb">
-                    <h3>Laidley</h3>
-                    <img src="images/laidley.jpg" alt="Laidley" />
-                    <p>
-                        A strong community with a proud farming tradition. Known for its
-                        contributions to Australia’s fresh produce.
-                    </p>
-                    <ul class="stats">
-                        <li>Median House Price: $X</li>
-                        <li>Growth: Y%</li>
-                        <li>Weekly Rent: $Z</li>
-                        <li>Rental Yield: A%</li>
-                    </ul>
+        <section>
+            <div class="title-group">
+                <h3 class="section-title">
+                    Gatton
+                </h3><small><a href="#">suburbs</a></small>
+            </div>
+            <div>
+                <article class="row">
+                    <div class="col-sm-6 suburb">
+                        <img src="images/gatton.png" alt="Sample" class="img-responsive">
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>University of Queensland - An integral part of the Salad Bowl</h4>
+                        <p>
+                            The Lockyer Valley produces around 40% of Queensland's fresh vegetables, with Gatton
+                            being one of the key agricultural centres in the region.
+                        </p>
+                        <p>
+                            Has agricultural research facilities, including the Universityof Queensland's Gatton Campus.
+                        </p>
+                    </div>
                 </article>
-
-                <article class="suburb">
-                    <h3>Gatton</h3>
-                    <img src="images/gatton.jpg" alt="Gatton" />
-                    <p>
-                        Home to the University of Queensland campus and a hub for agricultural
-                        research and development.
-                    </p>
-                    <ul class="stats">
-                        <li>Median House Price: $X</li>
-                        <li>Growth: Y%</li>
-                        <li>Weekly Rent: $Z</li>
-                        <li>Rental Yield: A%</li>
-                    </ul>
-                </article>
-
-                <!-- Add more suburb sections here -->
             </div>
         </section>
     </main>
@@ -79,6 +102,9 @@
     <div id="footer"></div>
 
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
