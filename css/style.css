@@ -16,8 +16,7 @@ body {
     background-color: var(--light-gray);
     line-height: 1.5;
     font-size: medium;
-    padding: 0 1rem;
-    /* remove once incorporate to the main file */
+    padding: 0 1rem; /* remove once incorporate to the main file */
     text-align: left;
 }
 
@@ -29,22 +28,7 @@ h4 {
     font-family: 'Geologica', sans-serif;
     font-weight: 600;
     color: var(--text);
-    margin-bottom: 0.75rem;
     letter-spacing: -0.075rem;
-}
-
-p {
-    margin-bottom: 1rem;
-    color: var(--text);
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 0.5rem;
 }
 
 /* Layout Wrappers */
@@ -54,12 +38,98 @@ main {
     padding: 2rem 0;
 }
 
-section {
-    margin-bottom: 2rem;
+/* Custom Margins - Let me know if there's already defined for this */
+/* Margin top */
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mt-1 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-2 {
+    margin-top: 1rem !important;
+}
+
+.mt-3 {
+    margin-top: 1.5rem !important;
+}
+
+.mt-4 {
+    margin-top: 2rem !important;
+}
+
+/* Margin bottom */
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-1 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 2rem !important;
+}
+
+/* Margin left */
+.ml-0 {
+    margin-left: 0 !important;
+}
+
+.ml-1 {
+    margin-left: 0.5rem !important;
+}
+
+.ml-2 {
+    margin-left: 1rem !important;
+}
+
+/* Margin right */
+.mr-0 {
+    margin-right: 0 !important;
+}
+
+.mr-1 {
+    margin-right: 0.5rem !important;
+}
+
+.mr-2 {
+    margin-right: 1rem !important;
+}
+
+/* All sides */
+.m-0 {
+    margin: 0 !important;
+}
+
+.m-1 {
+    margin: 0.5rem !important;
+}
+
+.m-2 {
+    margin: 1rem !important;
+}
+
+.m-3 {
+    margin: 1.5rem !important;
+}
+
+.m-4 {
+    margin: 2rem !important;
 }
 
 /* Custom Classes */
-.section-title {
+.article-title {
     letter-spacing: -0.05em;
     display: inline-flex;
     align-items: center;
@@ -67,7 +137,7 @@ section {
     line-height: 1;
 }
 
-.section-title::before {
+.article-title::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -76,32 +146,21 @@ section {
     margin-right: 0.25rem;
 }
 
-.intro {
-    margin-bottom: 3rem;
-}
-
 .intro h1 {
     letter-spacing: -0.05em;
-    margin-bottom: 1.5rem !important;
 }
 
 .intro img,
-.suburb img {
+.suburb img,
+.suburb video {
     border-radius: 8px;
     margin: 2rem 0;
+    width: 100%;
 }
 
 .title-group {
     display: flex;
     align-items: end;
-}
-
-.title-group h3 {
-    margin: 0;
-}
-
-.title-group small {
-    margin-left: 1rem;
 }
 
 /* Responsive Design - remove once incorporate to the main file */
