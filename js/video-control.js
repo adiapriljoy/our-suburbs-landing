@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const video = document.getElementById("plainLandVideo");
+  const video = document.getElementById("plainlandVideo");
 
   if (video) {
     const observer = new IntersectionObserver(
