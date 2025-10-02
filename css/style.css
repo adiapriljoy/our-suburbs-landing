@@ -31,6 +31,7 @@ h4 {
     letter-spacing: -0.075rem;
 }
 
+/* remove once incorporate to the main file */
 /* Layout Wrappers */
 main {
     max-width: 1200px;
@@ -187,7 +188,7 @@ main {
     display: inline;
 }
 
-/* Responsive Design - remove once incorporate to the main file */
+/* Responsive Design - remove the style for body once incorporate to the main file */
 @media (min-width: 768px) {
     body {
         padding: 0 1.875rem;
