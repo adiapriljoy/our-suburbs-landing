@@ -1,0 +1,241 @@
+:root {
+    --primary: #391871;
+    --text: #121212;
+    --accent: #83C41E;
+    --light-gray: #E8E8E8;
+    --white: #FFFFFF;
+}
+
+/* ── Spacing utilities (Bootstrap 3 doesn't include these) ── */
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: 0.5rem !important; }
+.mt-2 { margin-top: 1rem !important; }
+.mt-3 { margin-top: 1.5rem !important; }
+.mt-4 { margin-top: 2rem !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 0.5rem !important; }
+.mb-2 { margin-bottom: 1rem !important; }
+.mb-3 { margin-bottom: 1.5rem !important; }
+.mb-4 { margin-bottom: 2rem !important; }
+.ml-0 { margin-left: 0 !important; }
+.ml-1 { margin-left: 0.5rem !important; }
+.ml-2 { margin-left: 1rem !important; }
+.mr-0 { margin-right: 0 !important; }
+.mr-1 { margin-right: 0.5rem !important; }
+.mr-2 { margin-right: 1rem !important; }
+.m-0  { margin: 0 !important; }
+.m-1  { margin: 0.5rem !important; }
+.m-2  { margin: 1rem !important; }
+.m-3  { margin: 1.5rem !important; }
+.m-4  { margin: 2rem !important; }
+
+/* ── Base ── */
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+}
+
+/* ── Header / Navbar ── */
+.navbar-switch {
+    background-color: var(--white);
+    border: none;
+    border-bottom: 1px solid var(--light-gray);
+    border-radius: 0;
+    margin-bottom: 0;
+    min-height: 10rem;
+}
+
+.navbar-switch .navbar-brand {
+    padding: 0.625rem 0.9375rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-switch .navbar-brand img {
+    height: 5.25rem;
+    width: auto;
+}
+
+.navbar-switch .navbar-nav > li > a {
+    font-family: 'Geologica', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    text-transform: uppercase;
+    padding: 3.875rem 1.25rem;
+    line-height: 1.25;
+}
+
+.navbar-switch .navbar-nav > li > a .bi-chevron-down {
+    font-size: 0.7em;
+    vertical-align: middle;
+    margin-left: 0.1em;
+    -webkit-text-stroke: 0.8px currentColor;
+}
+
+.navbar-switch .navbar-nav > li > a:hover,
+.navbar-switch .navbar-nav > li > a:focus {
+    color: var(--primary);
+    background: transparent;
+}
+
+.navbar-switch .navbar-nav > li.active > a,
+.navbar-switch .navbar-nav > li.active > a:hover {
+    color: var(--text);
+    background: transparent;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+}
+
+.navbar-switch .navbar-nav > li.dropdown.open > a {
+    background: transparent;
+    color: var(--primary);
+}
+
+.navbar-switch .dropdown-menu {
+    border-radius: 0;
+    border-top: 2px solid var(--accent);
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+    margin-top: -2.5rem !important;
+}
+
+.navbar-switch .dropdown-menu > li > a {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-switch .dropdown-menu > li > a:hover {
+    background-color: rgba(131, 196, 30, 0.1);
+    color: var(--primary);
+}
+
+/* CONTACT button */
+.navbar-switch .nav-contact > a {
+    background-color: var(--primary);
+    color: var(--white) !important;
+    border-radius: 0.1875rem;
+    padding: 0.75rem 1.5rem !important;
+    margin-top: 3rem;
+    margin-left: 1.75rem;
+}
+
+.navbar-switch .nav-contact > a:hover {
+    background-color: #2a1154;
+    color: var(--white) !important;
+}
+
+/* Mobile toggle */
+.navbar-switch .navbar-toggle {
+    border-color: var(--primary);
+    margin-top: 1.75rem;
+}
+
+.navbar-switch .navbar-toggle .icon-bar {
+    background-color: var(--primary);
+}
+
+/* ── Footer ── */
+.site-footer {
+    background-color: #111111;
+    color: rgba(255,255,255,0.8);
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875rem;
+}
+
+.footer-main {
+    padding: 3.125rem 0 2.5rem;
+}
+
+.footer-brand .footer-logo {
+    height: 3.125rem;
+    width: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.625rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 0.25rem;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.social-icon:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.footer-links {
+    padding-top: 0.25rem;
+}
+
+.footer-links ul {
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links li a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer-links li a:hover {
+    color: var(--accent);
+}
+
+.footer-contact p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 0.625rem;
+    line-height: 1.6;
+}
+
+.footer-contact a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    background-color: #0a0a0a;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 0.875rem 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    text-align: right;
+}
+
+.footer-bottom a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: rgba(255,255,255,0.8);
+}

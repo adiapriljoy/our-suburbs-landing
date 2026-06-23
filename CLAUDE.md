@@ -71,6 +71,7 @@ The CSS variable names stay consistent across all folders, but the values differ
 | Folder         | --primary  | --text    | --accent  | --light-gray |
 |----------------|------------|-----------|-----------|--------------|
 | suburbsPages   | #17A4B8    | #121212   | #1ABC9C   | #E8E8E8      |
+| switchRealty   | #391871    | #121212   | #83C41E   | #E8E8E8      |
 
 **When starting a new folder, ask April for the correct palette before writing any CSS.**
 
@@ -204,6 +205,27 @@ Wire up auto-play/pause via `js/video-control.js` using Intersection Observer (t
 - **IDs:** camelCase (`#plainlandVideo`, `#our-area`)
 - **JS variables:** camelCase
 - **CSS variables:** descriptive, short (`--primary`, `--text`, `--accent`)
+
+---
+
+## Units & Measurements
+
+Always use dynamic/relative units. Never hardcode `px` for sizing, spacing, or typography.
+
+| Property type        | Preferred unit(s)              |
+|----------------------|--------------------------------|
+| Font size            | `rem` (base 16px = 1rem)       |
+| Padding / margin     | `rem`                          |
+| Component dimensions | `rem` or `%`                   |
+| Letter spacing       | `em`                           |
+| Line height          | Unitless (e.g. `1.5`) or `em`  |
+| Viewport-relative    | `vh`, `vw`, `dvh` for full-screen sections |
+| Fluid ranges         | `clamp(min, preferred, max)`   |
+
+**Exceptions where `px` is acceptable:**
+- Thin borders (`1px`, `2px`) — sub-pixel rendering makes `rem` unreliable here
+- `box-shadow` blur/spread values
+- Media query breakpoints (already defined in px below)
 
 ---
 
