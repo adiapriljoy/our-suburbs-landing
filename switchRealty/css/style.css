@@ -132,12 +132,196 @@ body {
 
 /* Mobile toggle */
 .navbar-switch .navbar-toggle {
-    border-color: var(--primary);
+    border-color: transparent;
+    box-shadow: none;
     margin-top: 1.75rem;
 }
 
 .navbar-switch .navbar-toggle .icon-bar {
     background-color: var(--primary);
+}
+
+/* Drawer close button — hidden on tablet/desktop */
+.drawer-close { display: none; }
+
+/* ── Tablet narrow (768px–991px) — show hamburger/drawer, override Bootstrap ── */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Bootstrap floats .navbar-header left at 768px+, shrink-wrapping it.
+       float: none makes it a full-width block; overflow: hidden clears floated children. */
+    .navbar-switch .navbar-header {
+        float: none !important;
+        overflow: hidden;
+    }
+    .navbar-switch .navbar-brand {
+        float: left !important;
+        height: 4.5rem;
+    }
+    .navbar-switch .navbar-toggle {
+        display: block !important;
+        float: right !important;
+        margin: 0.875rem 0;
+    }
+}
+
+/* ── Tablet wide (992px–1199px) ── */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-switch {
+        min-height: 8.5rem;
+    }
+    .navbar-switch .navbar-brand {
+        height: 8.5rem;
+    }
+    .navbar-switch .navbar-brand img {
+        height: 4.5rem;
+    }
+    .navbar-switch .navbar-nav > li > a {
+        font-size: 1rem;
+        padding: 3.375rem 0.625rem;
+        letter-spacing: 0.02em;
+    }
+    .navbar-switch .nav-contact > a {
+        margin-top: 2.75rem;
+        margin-left: 0.875rem;
+        padding: 0.7rem 1.25rem !important;
+    }
+    .navbar-switch .dropdown-menu {
+        margin-top: -2rem !important;
+    }
+}
+
+/* ── Mobile + tablet narrow (<992px) — Side drawer ── */
+@media (max-width: 991px) {
+    .navbar-switch {
+        min-height: 4.5rem;
+    }
+    .navbar-switch .navbar-brand {
+        height: 4.5rem;
+        padding: 0.625rem 0.9375rem;
+    }
+    .navbar-switch .navbar-brand img {
+        height: 2.75rem;
+    }
+    .navbar-switch .navbar-toggle {
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Drawer panel — always in DOM, slides in/out from right */
+    .navbar-switch .navbar-collapse {
+        display: block !important;
+        visibility: visible !important;
+        position: fixed !important;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 20rem;
+        height: 100vh !important;
+        height: 100dvh !important;
+        max-height: none !important;
+        overflow-y: auto !important;
+        background: var(--white);
+        z-index: 9999;
+        transition: right 0.3s ease;
+        border-top: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    /* Drawer open state (class toggled by JS) */
+    .navbar-switch .navbar-collapse.drawer-open {
+        right: 0;
+        box-shadow: -0.375rem 0 1.5rem rgba(0, 0, 0, 0.18);
+    }
+
+    /* Close (×) button inside drawer */
+    .drawer-close {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 0.625rem 1.5rem 0.25rem;
+        background: none;
+        border: none;
+        font-size: 1.75rem;
+        color: var(--text);
+        cursor: pointer;
+        line-height: 1;
+    }
+    .drawer-close:hover {
+        color: var(--primary);
+    }
+
+    /* Nav links in drawer */
+    .navbar-switch .navbar-nav {
+        margin: 0;
+        float: none !important;
+        width: 100%;
+    }
+    /* Bootstrap floats li at 768px+ — force vertical stacking in drawer */
+    .navbar-switch .navbar-nav > li {
+        float: none !important;
+        display: block;
+        width: 100%;
+    }
+    .navbar-switch .navbar-nav > li > a {
+        font-size: 0.9375rem;
+        padding: 0.875rem 1.5rem;
+        border-bottom: 1px solid var(--light-gray);
+        display: block;
+    }
+
+    /* Active nav: filled highlight instead of underline */
+    .navbar-switch .navbar-nav > li.active > a,
+    .navbar-switch .navbar-nav > li.active > a:hover {
+        background-color: var(--primary) !important;
+        color: var(--white) !important;
+        text-decoration: none;
+    }
+
+    /* Dropdowns expand inline inside drawer */
+    .navbar-switch .dropdown-menu {
+        position: static !important;
+        float: none !important;
+        width: 100%;
+        margin-top: 0 !important;
+        border-top: none;
+        border-left: 3px solid var(--accent);
+        box-shadow: none !important;
+        background-color: #f7f7f7;
+    }
+
+    /* Contact — plain list item in drawer, no button styling */
+    .navbar-switch .nav-contact > a {
+        background-color: transparent !important;
+        color: var(--text) !important;
+        border-radius: 0;
+        padding: 0.875rem 1.5rem !important;
+        margin: 0;
+        border-bottom: 1px solid var(--light-gray);
+        text-align: left;
+        display: block;
+    }
+    .navbar-switch .nav-contact > a:hover {
+        background-color: transparent !important;
+        color: var(--primary) !important;
+    }
+
+    /* Semi-transparent backdrop */
+    .nav-drawer-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 9998;
+    }
+    .nav-drawer-backdrop.active {
+        display: block;
+    }
+
+    /* Prevent body scroll while drawer is open */
+    body.nav-drawer-lock {
+        overflow: hidden;
+    }
 }
 
 /* ── Footer ── */
