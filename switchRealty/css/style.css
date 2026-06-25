@@ -444,3 +444,63 @@ body {
 .footer-bottom a:hover {
     color: var(--text);
 }
+
+.footer-brand-inner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-right {
+    display: flex;
+    gap: 10rem;
+    margin-left: auto;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+}
+
+.footer-bottom-container {
+    padding-right: 0 !important;
+}
+
+@media (max-width: 1199px) {
+    .footer-right {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .footer-brand {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-left: 0;
+        align-self: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-address p,
+    .footer-contact p {
+        text-align: center;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        text-align: center;
+    }
+}

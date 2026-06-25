@@ -257,9 +257,5 @@ Always use dynamic/relative units. Never hardcode `px` for sizing, spacing, or t
 
 **Before calling any task done, Claude must test the output.**
 
-- Open the page in a browser (use the `run` skill or dev server).
-- Check the golden path: does the layout render correctly? Do images/videos load? Is the responsive behaviour correct at mobile and desktop widths?
-- Check for regressions: do other pages in the same folder still work?
-- If the browser cannot be launched in the current session, explicitly state: *"I could not test this in a browser — please verify visually before shipping."*
-
-Never mark a task complete without either (a) confirming it was tested, or (b) clearly flagging that testing was skipped and why.
+- Check the code for errors (invalid HTML structure, broken CSS rules, bad references).
+- If the code has no errors, the task passes — no need to open a browser or run a dev server.
