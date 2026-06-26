@@ -669,7 +669,7 @@ body {
 }
 
 .footer-main {
-    padding: 2.5rem 0 2rem;
+    padding: 4rem 0 2rem;
     display: flex;
     justify-content: space-between;
 }
@@ -902,7 +902,7 @@ body {
     overflow: hidden;
 }
 
-.appraisal-ellipse {
+.sw-ellipsis-gradient {
     position: absolute;
     width: 150rem;
     height: 30rem;
@@ -918,11 +918,11 @@ body {
     filter: blur(2.34375rem);
 }
 
-.appraisal-ellipse--top {
+.sw-ellipsis-gradient--top {
     top: -15.875rem;
 }
 
-.appraisal-ellipse--bottom {
+.sw-ellipsis-gradient--bottom {
     bottom: -15.875rem;
 }
 
@@ -1170,4 +1170,94 @@ body {
     .irene-ai-col {
         padding-left: 0.9375rem;
     }
+}
+
+/* ── Testimonials ── */
+.testimonials {
+    position: relative;
+    padding: 5rem 0 8rem;
+    overflow: hidden;
+    background-image: url('../images/coverSlide1.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #391871;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.testimonials .container {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials-heading {
+    text-align: center;
+}
+
+.testimonials-slider {
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+    min-height: 9rem;
+}
+
+.testimonial-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-slide.is-active {
+    display: flex;
+    animation: testimonialFade 0.5s ease;
+}
+
+@keyframes testimonialFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.testimonial-quote {
+    display: block;
+    font-family: 'Geologica', sans-serif;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-author {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--white);
+    margin: 0;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+}
+
+.testimonial-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.testimonial-dot.is-active {
+    background: var(--white);
 }

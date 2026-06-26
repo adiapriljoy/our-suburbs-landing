@@ -76,8 +76,8 @@
         </section>
 
         <section class="appraisal">
-            <div class="appraisal-ellipse appraisal-ellipse--top"></div>
-            <div class="appraisal-ellipse appraisal-ellipse--bottom"></div>
+            <div class="sw-ellipsis-gradient sw-ellipsis-gradient--top"></div>
+            <div class="sw-ellipsis-gradient sw-ellipsis-gradient--bottom"></div>
             <div class="container">
                 <div class="appraisal-row">
                     <div class="appraisal-content">
@@ -177,6 +177,42 @@
                 </div>
             </div>
         </section>
+
+        <section class="testimonials">
+            <div class="sw-ellipsis-gradient sw-ellipsis-gradient--top"></div>
+            <div class="sw-ellipsis-gradient sw-ellipsis-gradient--bottom"></div>
+            <div class="container">
+                <h2 class="sw-title testimonials-heading">Words that mean everything to us</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial-slide is-active">
+                        <span class="testimonial-quote">&ldquo;</span>
+                        <p class="sw-body">Thank you Switch. Everyone we interacted with was lovely and super helpful.<br>We felt seen as a family and not just a number. Would 100% recommend.</p>
+                        <p class="testimonial-author">&mdash; Alison</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <span class="testimonial-quote">&ldquo;</span>
+                        <p class="sw-body">The team at Switch Realty made the entire selling process seamless.<br>We achieved a price beyond our expectations thanks to their expert negotiation.</p>
+                        <p class="testimonial-author">&mdash; Michael &amp; Sarah</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <span class="testimonial-quote">&ldquo;</span>
+                        <p class="sw-body">Switch Realty have managed our investment property for years with true professionalism.<br>I wouldn't trust anyone else with it.</p>
+                        <p class="testimonial-author">&mdash; David T.</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <span class="testimonial-quote">&ldquo;</span>
+                        <p class="sw-body">From first meeting to settlement, the service was exceptional.<br>They genuinely care about getting the best result for you.</p>
+                        <p class="testimonial-author">&mdash; The Johnsons</p>
+                    </div>
+                </div>
+                <div class="testimonial-dots">
+                    <button class="testimonial-dot is-active" type="button" aria-label="Testimonial 1"></button>
+                    <button class="testimonial-dot" type="button" aria-label="Testimonial 2"></button>
+                    <button class="testimonial-dot" type="button" aria-label="Testimonial 3"></button>
+                    <button class="testimonial-dot" type="button" aria-label="Testimonial 4"></button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <div id="footer"></div>
@@ -227,6 +263,44 @@
             }
 
             start();
+        })();
+    </script>
+    <script>
+        (function () {
+            var tSlides = document.querySelectorAll('.testimonial-slide');
+            var tDots = document.querySelectorAll('.testimonial-dot');
+            if (!tSlides.length || tSlides.length !== tDots.length) return;
+
+            var tCurrent = 0;
+            var tTimer;
+
+            function tShow(i) {
+                tSlides[tCurrent].classList.remove('is-active');
+                tDots[tCurrent].classList.remove('is-active');
+                tCurrent = (i + tSlides.length) % tSlides.length;
+                tSlides[tCurrent].classList.add('is-active');
+                tDots[tCurrent].classList.add('is-active');
+            }
+
+            function tStart() {
+                tTimer = setInterval(function () { tShow(tCurrent + 1); }, 6000);
+            }
+
+            function tReset() {
+                clearInterval(tTimer);
+                tStart();
+            }
+
+            for (var d = 0; d < tDots.length; d++) {
+                (function (index) {
+                    tDots[index].addEventListener('click', function () {
+                        tShow(index);
+                        tReset();
+                    });
+                })(d);
+            }
+
+            tStart();
         })();
     </script>
     <script>
