@@ -15,7 +15,56 @@
     <div id="header"></div>
 
     <main>
-        <!-- page content here -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="hero-title">Welcome to<br><span class="hero-title-accent">Switch Realty</span></h1>
+                <p>Switch Realty is a long-established Ipswich agency specialising in property management while selectively handling sales for property owners seeking a highly focused, professional outcome. Switch Realty is deliberately structured around managing residential and commercial investment properties, to the highest standard, while limiting sales to ensure every transaction receives expert attention and skilled negotiation.</p>
+                <p>Switch Realty is a long-established Ipswich agency with a core focus on property management, complemented by a selective and strategic approach to sales.</p>
+                <a href="#" class="hero-readmore">READ MORE</a>
+                <span class="hero-rule"></span>
+            </div>
+            <div class="hero-slider">
+                <div class="hero-slide is-active" style="background-image:url('images/coverSlide1.jpg')"></div>
+                <div class="hero-slide" style="background-image:url('images/coverSlide2.jpg')"></div>
+                <div class="hero-slide" style="background-image:url('images/coverSlide3.jpg')"></div>
+                <div class="hero-dots">
+                    <button class="hero-dot is-active" type="button" aria-label="Slide 1"></button>
+                    <button class="hero-dot" type="button" aria-label="Slide 2"></button>
+                    <button class="hero-dot" type="button" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-cards">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="#" class="service-card">
+                            <img src="images/buy.jpg" alt="Buy" class="service-card-img">
+                            <div class="service-card-overlay">
+                                <span class="service-card-label">BUY</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#" class="service-card">
+                            <img src="images/rent.jpg" alt="Rent" class="service-card-img">
+                            <div class="service-card-overlay">
+                                <span class="service-card-label">RENT</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#" class="service-card">
+                            <img src="images/buy.jpg" alt="Sold" class="service-card-img">
+                            <div class="service-card-overlay">
+                                <span class="service-card-label">SOLD</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <div id="footer"></div>
@@ -29,6 +78,44 @@
                 feather.replace({ width: 18, height: 18 });
             });
         });
+    </script>
+    <script>
+        (function () {
+            var slides = document.querySelectorAll('.hero-slide');
+            var dots = document.querySelectorAll('.hero-dot');
+            if (!slides.length || slides.length !== dots.length) return;
+
+            var current = 0;
+            var timer;
+
+            function show(i) {
+                slides[current].classList.remove('is-active');
+                dots[current].classList.remove('is-active');
+                current = (i + slides.length) % slides.length;
+                slides[current].classList.add('is-active');
+                dots[current].classList.add('is-active');
+            }
+
+            function start() {
+                timer = setInterval(function () { show(current + 1); }, 5000);
+            }
+
+            function reset() {
+                clearInterval(timer);
+                start();
+            }
+
+            for (var d = 0; d < dots.length; d++) {
+                (function (index) {
+                    dots[index].addEventListener('click', function () {
+                        show(index);
+                        reset();
+                    });
+                })(d);
+            }
+
+            start();
+        })();
     </script>
 </body>
 </html>
