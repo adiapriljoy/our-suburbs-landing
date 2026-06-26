@@ -1026,3 +1026,148 @@ body {
         width: 100%;
     }
 }
+
+/* ── IRENE Section ── */
+.irene-section {
+    background-color: var(--white);
+    padding: 5rem 0;
+}
+
+.irene-row {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.irene-col {
+    padding-top: 0.5rem;
+}
+
+.irene-member-col {
+    padding-right: 3rem;
+}
+
+.irene-ai-col {
+    padding-left: 3rem;
+}
+
+.irene-logo-lockup {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.irene-member-text {
+    font-family: 'Geologica', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: clamp(1.75rem, 2.5vw, 2.4rem);
+    line-height: 1;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: #1C2B58;
+}
+
+.irene-subheading {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 3rem;
+    text-align: center;
+}
+
+.irene-stats-row {
+    margin-bottom: 0.5rem;
+}
+
+.irene-stat-card {
+    position: relative;
+    text-align: center;
+}
+
+.irene-stat-img {
+    width: 100%;
+    display: block;
+}
+
+.irene-stat-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.irene-stat-number {
+    display: block;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 2.125rem);
+    line-height: 1.27;
+    color: #FAF9F6;
+    text-align: center;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.irene-stat-label {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.55rem, 1.2vw, 1rem);
+    line-height: 1.27;
+    color: #FAF9F6;
+    text-align: center;
+    margin-top: 0.35em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+}
+
+.irene-tagline {
+    text-align: center;
+    margin: 3rem 0 0;
+    font-weight: bold;
+}
+
+.irene-ai-point {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.irene-ai-point-title {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0 0 0.5rem;
+}
+
+.irene-ai-list {
+    padding-left: 1.25rem;
+}
+
+.irene-ai-list li::marker {
+    font-size: 1.3em;
+}
+
+@media (max-width: 991px) {
+    .irene-section {
+        padding: 3rem 0;
+    }
+
+    .irene-member-col {
+        padding-right: 0.9375rem;
+        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .irene-ai-col {
+        padding-left: 0.9375rem;
+    }
+}
