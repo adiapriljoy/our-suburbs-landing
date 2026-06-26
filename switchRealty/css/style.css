@@ -347,11 +347,13 @@ body {
     .hero-text {
         flex: 0 0 auto;
         max-width: 100%;
+        padding-bottom: 3rem;
     }
 
     .hero-slider {
         flex: 0 0 auto;
         height: clamp(16rem, 50vw, 24rem);
+        order: -1;
     }
 }
 
@@ -894,6 +896,10 @@ body {
     .service-cards .col-sm-4 + .col-sm-4 {
         margin-top: 1.5rem;
     }
+
+    .service-card {
+        height: 20rem;
+    }
 }
 
 /* ── Appraisal / Property Worth ── */
@@ -908,6 +914,8 @@ body {
     position: absolute;
     width: 150rem;
     height: 30rem;
+    left: 50%;
+    transform: translateX(-50%);
     pointer-events: none;
     z-index: 0;
     background: radial-gradient(50% 50% at 50% 50%,
@@ -1010,7 +1018,7 @@ body {
 
 @media (max-width: 767px) {
     .appraisal {
-        padding: 3rem 0;
+        padding: 4rem 0 6rem;
     }
 
     .appraisal-row {
@@ -1150,6 +1158,7 @@ body {
         padding-right: 0.9375rem;
         padding-bottom: 2.5rem;
         margin-bottom: 2.5rem;
+        border-bottom: 1px solid var(--light-gray);
     }
 
     .irene-ai-col {
@@ -1227,5 +1236,19 @@ body {
     justify-content: center;
     gap: 0.6rem;
     margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+    .irene-tagline {
+        margin-top: 1.5rem;
+    }
+
+    .testimonials {
+        padding: 3rem 0 4rem;
+    }
+
+    .testimonials-slider {
+        min-height: 12rem;
+    }
 }
 
