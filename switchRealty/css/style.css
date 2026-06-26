@@ -288,7 +288,8 @@ body {
     z-index: 2;
 }
 
-.hero-dot {
+.hero-dot,
+.testimonial-dot {
     width: 0.7rem;
     height: 0.7rem;
     padding: 0;
@@ -299,7 +300,8 @@ body {
     transition: background 0.2s;
 }
 
-.hero-dot.is-active {
+.hero-dot.is-active,
+.testimonial-dot.is-active {
     background: var(--white);
 }
 
@@ -1051,23 +1053,6 @@ body {
     padding-left: 3rem;
 }
 
-.irene-logo-lockup {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    margin-bottom: 1.5rem;
-}
-
-.irene-member-text {
-    font-family: 'Geologica', sans-serif;
-    font-style: italic;
-    font-weight: 900;
-    font-size: clamp(1.75rem, 2.5vw, 2.4rem);
-    line-height: 1;
-    letter-spacing: -0.07em;
-    text-transform: uppercase;
-    color: #1C2B58;
-}
 
 .irene-subheading {
     font-family: 'Geologica', sans-serif;
@@ -1198,9 +1183,6 @@ body {
     z-index: 2;
 }
 
-.testimonials-heading {
-    text-align: center;
-}
 
 .testimonials-slider {
     max-width: 50rem;
@@ -1247,17 +1229,3 @@ body {
     margin-top: 2rem;
 }
 
-.testimonial-dot {
-    width: 0.7rem;
-    height: 0.7rem;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.testimonial-dot.is-active {
-    background: var(--white);
-}
