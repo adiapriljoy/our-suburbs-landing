@@ -17,9 +17,9 @@
     <main>
         <section class="hero">
             <div class="hero-text">
-                <h1 class="hero-title">Welcome to<br><span class="hero-title-accent">Switch Realty</span></h1>
-                <p>Switch Realty is a long-established Ipswich agency specialising in property management while selectively handling sales for property owners seeking a highly focused, professional outcome. Switch Realty is deliberately structured around managing residential and commercial investment properties, to the highest standard, while limiting sales to ensure every transaction receives expert attention and skilled negotiation.</p>
-                <p>Switch Realty is a long-established Ipswich agency with a core focus on property management, complemented by a selective and strategic approach to sales.</p>
+                <h1 class="sw-title">Welcome to<br><span class="hero-title-accent">Switch Realty</span></h1>
+                <p class="sw-body">Switch Realty is a long-established Ipswich agency specialising in property management while selectively handling sales for property owners seeking a highly focused, professional outcome. Switch Realty is deliberately structured around managing residential and commercial investment properties, to the highest standard, while limiting sales to ensure every transaction receives expert attention and skilled negotiation.</p>
+                <p class="sw-body">Switch Realty is a long-established Ipswich agency with a core focus on property management, complemented by a selective and strategic approach to sales.</p>
                 <a href="#" class="hero-readmore">READ MORE</a>
                 <span class="hero-rule"></span>
             </div>
@@ -61,6 +61,37 @@
                                 <span class="service-card-label">SOLD</span>
                             </div>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="appraisal">
+            <div class="appraisal-ellipse appraisal-ellipse--top"></div>
+            <div class="appraisal-ellipse appraisal-ellipse--bottom"></div>
+            <div class="container">
+                <div class="appraisal-row">
+                    <div class="appraisal-content">
+                        <h2 class="sw-title">What's Your<br>Property Worth?</h2>
+                        <p class="sw-body">We would love to meet for a no obligation free appraisal of your property, even if for curiosity or insurance matters.</p>
+                        <p class="sw-body">We love property, we love our area, this is what we thrive on. Getting to know more people and more homes.</p>
+                        <div class="appraisal-actions">
+                            <a href="#" class="sw-btn primary-btn">SALE APPRAISAL</a>
+                            <a href="#" class="sw-btn secondary-btn">RENT APPRAISAL</a>
+                        </div>
+                    </div>
+                    <div class="appraisal-media">
+                        <div class="appraisal-video" id="appraisalVideo">
+                            <img src="images/swThumbnail.jpg" alt="Switch Realty video" class="appraisal-thumb">
+                            <button class="appraisal-play" aria-label="Play video">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M8 5v14l11-7z" fill="#83C41E"/>
+                                </svg>
+                            </button>
+                            <video class="appraisal-video-player" controls controlsList="nodownload" disablePictureInPicture>
+                                <source src="https://www.agentsdata.com.au/website/Files/1/Referred_Agency_video_2020.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,6 +146,21 @@
             }
 
             start();
+        })();
+    </script>
+    <script>
+        (function () {
+            var videoWrap = document.getElementById('appraisalVideo');
+            if (!videoWrap) return;
+            var playBtn = videoWrap.querySelector('.appraisal-play');
+            var thumb = videoWrap.querySelector('.appraisal-thumb');
+            var video = videoWrap.querySelector('.appraisal-video-player');
+            playBtn.addEventListener('click', function () {
+                thumb.style.display = 'none';
+                playBtn.style.display = 'none';
+                video.style.display = 'block';
+                video.play();
+            });
         })();
     </script>
 </body>
